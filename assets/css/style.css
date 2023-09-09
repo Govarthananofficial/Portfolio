@@ -577,6 +577,8 @@ button {
   width: 256px;
   border-radius: 0.5rem;
   justify-self: center;
+  border: #3f1f5f 0.1rem solid;
+  border-color: #3f1f5f;
 }
 
 .portfolio_title {
