@@ -219,10 +219,3 @@ var typed = new Typed(".type", {
   backSpeed: 60,
   loop: true,
 });
-
-
-window.addEventListener('load', function () {
-  // Hide the loader when the page is fully loaded
-  const loader = document.querySelector('.loader-container');
-  loader.style.display = 'none';
-});
