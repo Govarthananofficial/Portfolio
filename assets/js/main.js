@@ -92,30 +92,43 @@ skillHeaderArr.forEach((element, idx) => {
 });
 
 // QUALIFICATION TABS
-let education = document.getElementById("education");
-let work = document.getElementById("work");
-let educationheader = document.getElementById("educationheader");
-let workheader = document.getElementById("workheader");
-workheader.style.color = "var(--text-color)";
-educationheader.style.color = "var(--first-color)";
+document.addEventListener("DOMContentLoaded", function() {
+    const education = document.getElementById("education");
+    const work = document.getElementById("work");
+    const educationheader = document.getElementById("educationheader");
+    const workheader = document.getElementById("workheader");
 
-educationheader.addEventListener("click", () => {
-  let condition1 = work.classList.contains("qualification-inactive");
-  if (!condition1) {
-    education.classList.remove("qualification-inactive");
-    work.classList.add("qualification-inactive");
-    workheader.style.color = "var(--text-color)";
-    educationheader.style.color = "var(--first-color)";
-  }
-});
-workheader.addEventListener("click", () => {
-  let condition2 = education.classList.contains("qualification-inactive");
-  if (!condition2) {
-    work.classList.remove("qualification-inactive");
-    education.classList.add("qualification-inactive");
-    educationheader.style.color = "var(--text-color)";
-    workheader.style.color = "var(--first-color)";
-  }
+    // Initial state
+    educationheader.classList.add("active");
+    workheader.classList.add("inactive");
+    education.classList.add("qualification_active");
+    work.classList.add("qualification_inactive");
+
+    educationheader.addEventListener("click", () => {
+        if (!work.classList.contains("qualification_inactive")) {
+            education.classList.add("qualification_active");
+            education.classList.remove("qualification_inactive");
+            work.classList.add("qualification_inactive");
+            work.classList.remove("qualification_active");
+            educationheader.classList.add("active");
+            workheader.classList.add("inactive");
+            educationheader.classList.remove("inactive");
+            workheader.classList.remove("active");
+        }
+    });
+
+    workheader.addEventListener("click", () => {
+        if (!education.classList.contains("qualification_inactive")) {
+            work.classList.add("qualification_active");
+            work.classList.remove("qualification_inactive");
+            education.classList.add("qualification_inactive");
+            education.classList.remove("qualification_active");
+            workheader.classList.add("active");
+            educationheader.classList.add("inactive");
+            workheader.classList.remove("inactive");
+            educationheader.classList.remove("active");
+        }
+    });
 });
 
 // PORTFOLIO SWIPER
