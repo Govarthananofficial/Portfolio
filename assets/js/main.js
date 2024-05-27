@@ -211,7 +211,7 @@ themeButton.addEventListener("click", () => {
 
 // Typing Animation using Typed JS
 var typed = new Typed(".type", {
-  strings: [ "A UI-UX Designer, A Flutter UI Developer, An Angular UI Developer, A Graphic Designer, a Web Designer, and A Front-End UI Developer"],
+  strings: [ "A UI-UX Designer", "A Flutter UI Developer", "An Angular UI Developer", "A Graphic Designer", "a Web Designer", "A Front-End UI Developer"],
   smartBackspace: true,
   startDelay: 1000,
   typeSpeed: 130,
