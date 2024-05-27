@@ -564,6 +564,27 @@ button {
   display: none;
 }
 
+.qualification_inactive {
+  display: none;
+}
+
+.qualification_active {
+  display: block;
+}
+
+.qualification_tabs .qualification_button {
+  cursor: pointer;
+}
+
+.qualification_tabs .qualification_button.active {
+  color: var(--first-color);
+}
+
+.qualification_tabs .qualification_button.inactive {
+  color: var(--text-color);
+}
+
+
 /* PORTFOLIO  */
 .portfolio_container {
   overflow: initial;
